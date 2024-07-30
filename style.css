@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* CSS Resets */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+img {
+   max-width: 20px;
+   max-height: 15px;
+}
+
+/* Veriable collections */
+
+:root {
+   /* fonts */
+   --fs: 1rem;
+   --fw: 500;
+   --ff: Hanken Grotesk;
+   /* measurements */
+   --cd-height: 450px;
+   --cd-width: 450px;
+   --padding: 1rem;
+   --border-radius: 25px;
+   --top-bottom-margin: 2rem 0;
+   /* colours */
+   /* background and circle colors */
+   --violet-blue: hsla(256, 72%, 46%, 1);
+   --persian-blue: hsla(241, 72%, 46%, 0);
+   --Light-slate-blue: hsl(252, 100%, 67%);
+   --Light-royal-blue: hsl(241, 81%, 54%);
+   --light-gray: hsl(0, 2%, 80%);
+   /* result colors */
+   --light-lavender: hsl(241, 100%, 89%);
+   /* summary colors */
+   --light-red: hsla(0, 100%, 67%, 0.1);
+   --orangy-yellow: hsla(39, 100%, 56%, 0.1);
+   --green-teal: hsl(166, 100%, 37%, 0.1);
+   --cobalt-blue: hsl(234, 85%, 45%, 0.1);
+   --light-gray-blue: hsl(224, 30%, 27%);
+}
+
+/* Styling */
+body {
+   font-size: var(--font-size);
+   font-family: var(--ff), serif;
+}
+
+main {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+/* card styling */
+.card {
+   width: 35rem;
+   height: 30rem;
+   border-radius: var(--border-radius);
+   background-color: whitesmoke;
+   display: flex;
+}
+
+/* result styling */
+.result {
+   --padding: 1.5rem;
+   background-image: linear-gradient(
+      var(--Light-slate-blue),
+      var(--Light-royal-blue)
+   );
+   color: #fff;
+   border-radius: var(--border-radius);
+   width: 50%;
+   text-align: center;
+   padding: var(--padding);
+}
+
+.result h1 {
+   font-size: 1.3rem;
+   font-weight: 500;
+   color: var(--light-lavender);
+}
+
+.score {
+   display: flex;
+   justify-content: center;
+}
+
+.score p {
+   width: 200px;
+   height: 200px;
+   border-radius: 50%;
+   font-size: 1rem;
+   background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+   margin: var(--top-bottom-margin);
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.score .my_score {
+   display: block;
+   font-size: 3em;
+   font-weight: 700;
+}
+
+.score .out_of {
+   --light-gray: hsl(0, 1%, 63%);
+   color: var(--light-lavender);
+}
+
+.prais {
+   color: var(--light-lavender);
+}
+
+/* result summary styling */
+.summary {
+   padding: 1rem;
+   width: 50%;
+   padding: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 2.5rem;
+}
+
+.summary_results {
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+}
+
+.sm {
+   min-height: 3rem;
+   font-size: 1rem;
+   font-weight: 600;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-radius: 10px;
+   padding: 0.5rem;
+}
+
+.sm figure {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 0.5rem;
+}
+
+.sm p {
+   color: black;
+}
+
+.sm p span {
+   color: gray;
+}
+
+.reaction {
+   background-color: var(--light-red);
+   color: hsl(0, 100%, 67%);
+}
+
+.memory {
+   background-color: var(--orangy-yellow);
+   color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+   background-color: var(--green-teal);
+   color: hsl(166, 100%, 37%);
+}
+
+.visual {
+   background-color: var(--cobalt-blue);
+   color: hsl(234, 85%, 45%);
+}
+
+/* button */
+.summary a {
+   background-color: var(--light-gray-blue);
+   color: firebrick;
+   text-decoration: none;
+   height: 3rem;
+   width: 15rem;
+   border-radius: 50px;
+   font-size: 1rem;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.summary a:any-link {
+   color: #fff;
+}
+
+.summary :is(a:hover, a:focus) {
+   filter: brightness(120%);
+}
+
+.summary a:active {
+   /*  background-image: linear-gradient(var(--violet-blue, --persian-blue)); */
+   /* background-color: red; */
+   background-image: linear-gradient(
+      var(--Light-slate-blue),
+      var(--Light-royal-blue)
+   );
+}
